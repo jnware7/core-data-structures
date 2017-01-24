@@ -1,24 +1,36 @@
 'use strict'
 
 export default class Stack {
-  // your code here
+  
   constructor () {
     this.array = []
-  }
-  lengths () {
-    return this.array.length
-  }
-  addTop(value) {
-    return this.array.push(value)
+    this.count = 0
   }
 
-  removeTop(){
-    return this.array.length > 0 ? this.array.pop() : null
+  size() {
+    return this.count
   }
-  peek(){
-    return this.array.length > 0 ? this.array[this.array.length-1] : null
+
+  add(element) {
+    return this.array[this.count++] = element
   }
-  isEmpty(){
-    return this.array.length > 0 ? false : true
+
+  removeTop() {
+    // this.count > 0 ? this.count-- : null
+    if (this.count) {
+      const removedTop = this.array[this.count - 1]
+      delete this.array[this.count - 1]
+      return removedTop
+    }
+
+    return null
+  }
+
+  peek() {
+    return this.count > 0 ? this.array[this.count - 1] : null
+  }
+
+  isEmpty() {
+    return this.count <= 0
   }
 }
