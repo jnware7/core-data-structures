@@ -1,6 +1,7 @@
 'use strict'
 
 export default class Stack {
+  
   constructor () {
     this.array = []
     this.count = 0
@@ -32,5 +33,4 @@ export default class Stack {
   isEmpty() {
     return this.count <= 0
   }
-
 }
