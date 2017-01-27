@@ -80,7 +80,7 @@ describe('PriorityQueue', () => {
   })
 
   context('lengths()', () => {
-    it.only('returns the number of elements in the queue', () => {
+    it('returns the number of elements in the queue', () => {
       const pQueue = new PriorityQueue()
       pQueue.enqueue('dude', 90)
       pQueue.enqueue('cool', 20)
